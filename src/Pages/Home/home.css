@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.search-bar input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 300px;
+}
+
+.main-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.current-weather, .weekly-forecast {
+  padding: 20px;
+  flex: 1;
+}
+
+.loading {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+.loading img {
+  width: 100px; 
+  height: 100px;
+}
+
+.error {
+  color: #6c9ccd;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+.message {
+  color: #28a745;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and larger phones (portrait orientation) */
+@media (max-width: 1130px) {
+  .main-content {
+    flex-direction: column;
+  }
+  
+  .search-bar input {
+    width: 100%;
+  }
+}
+
+/* Small tablets and large phones (landscape orientation) */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .search-bar input {
+    width: 80%;
+  }
+
+  .current-weather, .weekly-forecast {
+    padding: 15px;
+  }
+
+  .loading, .error, .message {
+    font-size: 1.5rem;
+  }
+
+  .loading img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Phones (portrait orientation) */
+@media (max-width: 576px) {
+  .home {
+    padding: 10px;
+  }
+
+  .header h1 {
+    font-size: 1.2rem;
+  }
+
+  .search-bar input {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .current-weather, .weekly-forecast {
+    padding: 10px;
+  }
+
+  .loading, .error, .message {
+    font-size: 1.2rem;
+  }
+
+  .loading img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Small phones (portrait orientation) */
+@media (max-width: 360px) {
+  .header h1 {
+    font-size: 1rem;
+  }
+
+  .search-bar input {
+    padding: 6px;
+  }
+
+  .current-weather, .weekly-forecast {
+    padding: 5px;
+  }
+
+  .loading, .error, .message {
+    font-size: 1rem;
+  }
+
+  .loading img {
+    width: 50px;
+    height: 50px;
+  }
+}

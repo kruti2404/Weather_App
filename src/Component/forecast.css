@@ -1,0 +1,142 @@
+.forecast {
+  text-align: center;
+  align-items: center;
+}
+
+.forecast h2 {
+  text-align: center;
+  margin-top: 0px;
+}
+
+.forecast-items {
+  width: auto;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.forecast-item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+  border-radius: 8px;
+  margin: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.forecast-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.forecast-item div {
+  margin: 0;
+  padding: 0 30px;
+}
+
+.forecast-item div p {
+  padding: 2px;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.forecast-item div p.description {
+  margin: 0;
+  display: flex;
+  font-size: 1rem;
+  justify-content: start;
+  align-items: center;
+}
+
+.forecast-item div p.description img {
+  width: 25%;
+  height: auto;
+  margin: -10px 0;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and larger phones (portrait orientation) */
+@media (max-width: 1130px) {
+  .forecast-item {
+    /* grid-template-columns: 1fr; */
+    text-align: center;
+  }
+
+  .forecast-item div {
+    padding: 0 10px;
+  }
+
+  .forecast-item div p {
+    font-size: 0.9rem;
+  }
+
+  .forecast-item div p.description img {
+    width: 20%;
+  }
+}
+
+/* Small tablets and large phones (landscape orientation) */
+@media (max-width: 768px) {
+  .forecast h2 {
+    font-size: 1.5rem;
+  }
+
+  .forecast-item {
+    grid-template-columns: 1fr;
+  }
+
+  .forecast-item div p {
+    font-size: 0.85rem;
+  }
+
+  .forecast-item div p.description img {
+    width: 15%;
+  }
+}
+
+/* Phones (portrait orientation) */
+@media (max-width: 576px) {
+  .forecast h2 {
+    font-size: 1.3rem;
+  }
+
+  .forecast-item {
+    grid-template-columns: 1fr;
+  }
+
+  .forecast-item div {
+    padding: 0 5px;
+  }
+
+  .forecast-item div p {
+    font-size: 0.8rem;
+  }
+
+  .forecast-item div p.description img {
+    width: 15%;
+  }
+}
+
+/* Small phones (portrait orientation) */
+@media (max-width: 360px) {
+  .forecast h2 {
+    font-size: 1.2rem;
+  }
+
+  .forecast-item {
+    grid-template-columns: 1fr;
+  }
+
+  .forecast-item div {
+    padding: 0 2px;
+  }
+
+  .forecast-item div p {
+    font-size: 0.75rem;
+  }
+
+  .forecast-item div p.description img {
+    width: 10%;
+  }
+}
