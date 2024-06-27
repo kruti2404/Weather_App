@@ -3,7 +3,7 @@ import './search.css';
 import Weather from '../../Component/weather';
 import Forecast from '../../Component/forecast';
 import { useLocation } from 'react-router-dom';
-import loadingImage from '../../Media/loading.gif';
+import loadingImage from '../../Media/spin.gif';
 
 function Search() {
   const location = useLocation();

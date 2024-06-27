@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './home.css';
 import Weather from '../../Component/weather.jsx';
 import Forecast from '../../Component/forecast.jsx';
-import loadingImage from '../../Media/loading.gif';
+import loadingImage from '../../Media/spin.gif';
 
 
 function Home() {
