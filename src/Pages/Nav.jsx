@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import './nav.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
+import { WiDaySunny } from 'weather-icons-react';
+import { IoSearch } from "react-icons/io5";
+
 
 function Nav({ isDarkMode, toggleDarkMode }) {
   const navigate = useNavigate();
@@ -17,28 +20,31 @@ function Nav({ isDarkMode, toggleDarkMode }) {
 
   return (
     <div className='Header'>
-      <h1><Link to="/">Weather App</Link></h1>
-      <ul className="List">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-      </ul>
-      <div className="search">
-        <input
-          type="text"
-          id='inputCity'
-          value={city}
-          placeholder='City....'
-          onChange={(e) => setCity(e.target.value)}
-        />
-        <button id='SearchBtn' onClick={searchButtonClicked}>Search</button>
-      </div>
-      <div className='toggleBtn'>
-        <DarkModeSwitch
-          style={{ marginBottom: '2rem' }}
-          checked={isDarkMode}
-          onChange={toggleDarkMode}
-          size={35}
-        />
+      <h1>
+        <Link to="/" className="header-link">
+          <WiDaySunny size={40} className="header-icon" />
+          <span className="header-text">Weather</span>
+        </Link>
+      </h1>      <div className="search-container">
+        <div className="search">
+          <input
+            type="text"
+            id='inputCity'
+            value={city}
+            placeholder='City....'
+            onChange={(e) => setCity(e.target.value)}
+            autocomplete="off"
+
+          />
+          <a id='SearchBtn' onClick={searchButtonClicked}><IoSearch size={20} /></a>
+        </div>
+        <div className='toggleBtn'>
+          <DarkModeSwitch
+            checked={isDarkMode}
+            onChange={toggleDarkMode}
+            size={35}
+          />
+        </div>
       </div>
     </div>
   );
